@@ -80,53 +80,11 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-## Publish this repository
-
-Create a public GitHub repository named `marketplace-product-analytics` without adding another README, licence, or `.gitignore`.
-
-If you are working from this existing Git repository, push it directly:
-
-```bash
-git remote add origin https://github.com/ZachL1113/marketplace-product-analytics.git
-git push -u origin main
-```
-
-If you downloaded the project archive, extract it and initialise the repository first:
-
-```bash
-git init -b main
-git add .
-git commit -m "Initialize marketplace product analytics case study"
-git remote add origin https://github.com/ZachL1113/marketplace-product-analytics.git
-git push -u origin main
-```
-
-Alternatively, use GitHub's **Add file -> Upload files** control to upload the extracted contents, including the hidden `.github` workflow folder.
-
-The intended public URL is:
-
-`https://github.com/ZachL1113/marketplace-product-analytics`
-
-Without the Olist CSV files, the app runs in clearly labelled **demo mode** using a small synthetic fixture. To use the public data, download the dataset from Kaggle and place these files in `data/raw/`:
-
-- `olist_orders_dataset.csv`
-- `olist_order_items_dataset.csv`
-- `olist_customers_dataset.csv`
-- `olist_order_reviews_dataset.csv`
-
 ## Tests
 
 ```bash
 python -m unittest discover -s tests -v
 ```
-
-## Decision principles
-
-- Do not confuse correlation with causal impact.
-- Do not rank low-volume sellers on unstable rates without a confidence adjustment.
-- Keep scoring weights visible and adjustable.
-- Pair every intervention metric with commercial and seller-supply guardrails.
-- Preserve traceability from dashboard conclusions to metric definitions and source data.
 
 ## Data acknowledgement
 
